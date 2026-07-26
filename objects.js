@@ -1,4 +1,5 @@
 const symb = Symbol("key")
+
 const user = {
     name:"Jagjit",
     "lastname":"Singh",//this never acces by dot only by ["latname"]
@@ -8,6 +9,7 @@ const user = {
     location:"San francisco",
     workday:["monday","tuesday","wednesday","thursday","friday"] 
  }// string never access by dot or if acces like user[name] is not  correct way user["name"].
+
 console.log(user.name)
 console.log(user["name"])
 console.log(user["lastname"])
@@ -32,3 +34,24 @@ const user2 = new Object(); // singleton object
 user2.name = "Jagjit";
 user2.age = 22;
 console.log(user2);
+ 
+const user3= {
+    topic:"Nested loop",
+    detail:{
+        fullname:{
+           first:"Jagjit",
+           last:"Singh"
+        }
+    }
+}
+console.log(user3.detail.fullname.first);// no topic because it was string
+
+const obj3 = Object.assign({},user, user3)// add objects if i add {} this in start it mean all object value goesin {} otherwise go in user
+console.log(obj3)
+
+const obj4 = {...user,...user3}// other way to merge obj.
+console.log(obj4)
+
+console.log(Object.keys(user));//return key ony but in array format same value return kar sakte hai
+console.log(Object.entries(user));// give key and value each key value pair consider as one element in array. 
+
