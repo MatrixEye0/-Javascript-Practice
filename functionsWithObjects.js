@@ -20,11 +20,23 @@ function handelObject(obj){
 }
 console.log(handelObject(user))
 
-//------------------------------------------------------------------------------------------------------------
-
+//---------------------------------------------------------------------------------------------------------
 const myArr = [ 20,60,50,30]
 function returnSecondValue(getArr){
     return getArr[1]
 }
-console.log(returnSecondValue(myArr));
+console.log(returnSecondValue(myArr)); 
 
+//------------------Scopes-------------------
+
+function one(){
+    const user ="Jagjit"
+
+    function two(){
+        const position = "CEO"
+        console.log(user);     
+    }
+   // console.log(position); this is worng statemen because position describe inside scope and call outside scope
+    two()   
+}
+one()// not return because they not access child value. child access parent value
