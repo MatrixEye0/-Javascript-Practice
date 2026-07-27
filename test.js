@@ -5,7 +5,7 @@ var pass = "abc56"
 let check
 
 city = "delhi"
-city="bhura"
+city="Asmoli"
 
 console.table([ jagjit, email, typeof pass, city, check])
  
