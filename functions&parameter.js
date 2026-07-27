@@ -13,7 +13,8 @@ console.log("Result 1 : ", result)
 console.log("Result 2 : ", result2)
 console.log("Result 3 : ", result3)
 
-//console.log(loguser('Jagjit')) if we console befor function it also
+//console.log(loguser('Jagjit')) if we console befor function it also run 
+// but if console before function and function store inside datatype like const stroe = function() it not run
 function loguser(user){
     return`${user} just logged in`
 }
