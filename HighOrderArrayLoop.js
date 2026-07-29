@@ -34,4 +34,11 @@ for (const key in obj1) {
     console.log(`${key} : ${obj1[key]}`);
 }
 
+//----------forin in Array---------------------------------------------------------------------------------------------
 
+//-- array also have key value which default start from 0 and go to infinite number
+
+const arr = ["Js","C++","Java","Python"]
+for (const key in arr) {
+    console.log(`key is ${key} and its value is : ${arr[key]}`);
+}   
