@@ -42,3 +42,29 @@ const arr = ["Js","C++","Java","Python"]
 for (const key in arr) {
     console.log(`key is ${key} and its value is : ${arr[key]}`);
 }   
+
+//-----------------------------------Foreach----------------------------------------------------------------------------------------------
+
+const games = ['Cricket','Football','Tennis','Hockey','Basketball']
+games.forEach( function(value,index,array) /* this is callback function that's why they have no name 
+                                             here value is array value , index is array index , array is whole aray */
+{
+   console.log(value);
+   console.log(value,index,array);// give value, index number, return whole array which the value part of this 
+})
+
+// -------- foreach in object inside array 
+// forEach() runs once for each object that's why this give output is javascript & undefine because py not define.
+const obj2 = [ {js:'javascript'},{py:'python'}]
+
+obj2.forEach( (val)=>{
+    console.log(val.js);
+});
+
+// here it give proper key value 
+
+const obj3 = [ {Language:'javascript',ext:'js'}, {Language:'python',ext:'py'}]
+
+obj3.forEach( (val)=>{
+    console.log(val.Language);
+})
