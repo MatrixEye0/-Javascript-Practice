@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >Dom practice</title>
+    <style>
+        .black{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body id="body" class="black">
+<h1 id="title" class="heading"> DOM practice </h1>
+
+    <div class="insidebody">
+       
+    </div>
+</body>
+<script>
+   function add(name){
+    const di = document.createElement('li')// li scope inside so not create problem if same elelem create outside
+    di.innerHTML=`${name}`
+    document.querySelector('.insidebody').appendChild(di)
+   }
+   add("Jagjit")
+   add("Singh")  // this method treverse tree  again and again because of innerHTML not optimise aproach
+
+   // ------- optimose approach 
+ function addOptimal(name){
+    const di = document.createElement('li')
+    di.appendChild(document.createTextNode(name))
+    document.querySelector('.insidebody').appendChild(di)
+   }
+    addOptimal("Mahima")
+   addOptimal("Gupta")
+// -------------change name--------------------------
+   const change = document.querySelector("li:nth-child(4)")
+   const newname = document.createElement('li')
+   newname.textContent = "kaur"
+   change.replaceWith(newname)
+
+//-----remove-----------------
+const remove = document.querySelector('li:nth-child(4)')
+remove.remove()
+   
+</script>
+</html>
