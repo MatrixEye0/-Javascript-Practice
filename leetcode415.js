@@ -27,3 +27,4 @@ var addStrings = function(num1,num2) {
     return result;
 };
 console.log (addStrings("34","78"));
+console.log (addStrings("65","98"));
