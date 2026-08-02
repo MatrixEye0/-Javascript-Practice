@@ -63,7 +63,7 @@ buttons.forEach(function(button){
            if(change.target.id==='violet'){
             body.style.backgroundColor=change.target.id
            }
-           if(change.target.id==='maron'){
+           if(change.target.id==='lightgreen'){
             body.style.backgroundColor=change.target.id
            }
            if(change.target.id==='olive'){
