@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Propagation</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        ul{
+            cursor: pointer;
+        }
+
+        #output{
+            width:500px;
+            min-height:180px;
+            background:#111;
+            color:#00ff00;
+            padding:15px;
+            margin-top:20px;
+            border-radius:10px;
+            font-family: monospace;
+            overflow-y:auto;
+        }
+
+        h2{
+            margin-bottom:5px;
+        }
+    </style>
+</head>
+<body>
+
+   <ul class="ul" id="list">
+        <li class="l1" id="1">Jagjit singh</li>
+        <li class="l1" id="2">Sofware Devloper</li>
+        <li class="l1" id="3">IPL</li>
+        <li class="l1" id="4">
+            <a href="https://github.com/MatrixEye0">Github</a>
+        </li>
+   </ul>
+
+   <ul class="ul2" id="list2">
+        <li class="li1" id="i">India</li>
+        <li class="li2" id="j">Cricket</li>
+        <li class="li3" id="k">Punjab Kings</li>
+   </ul>
+
+   <h2>Console Output</h2>
+
+   <div id="output">
+        Waiting for Event...
+   </div>
+
+<script>
+
+const output=document.getElementById("output");
+
+function print(msg){
+    output.innerHTML += "<br>"+msg;
+    output.scrollTop=output.scrollHeight;
+}
+
+// ----------------enent listner -------------
+document.getElementById('list').addEventListener('click',function(e){
+        console.log('Clicked UL');
+        print("Clicked UL");
+},false)/* by default false set automaticaly false and true is event propogation
+             false mean bubble propogation mean first inside ul value and upper value like li first and ul
+             in true first ul than li*/
+
+document.getElementById('2').addEventListener('click',function(e){
+        console.log('Clicked SDE ');
+        print("Clicked SDE");
+},false)
+
+document.getElementById('3').addEventListener('click',function(e){
+        console.log('Clicked League ');
+        print("Clicked League");
+        e.stopPropagation(); // if click now event not go from eneywhere only stick on where you click  only work in false event
+},false)
+
+document.getElementById('4').addEventListener('click',function(e){
+        console.log('Clicked Github ');
+        print("Clicked Github");
+        e.preventDefault(); // if click now no link trigger
+},false)
+
+
+//-----------true event ------------------
+
+document.getElementById('list2').addEventListener('click',function(e){
+        console.log('Clicked UL');
+        print("Clicked UL (Capture)");
+},true)// first ul than li up to down
+
+document.getElementById('j').addEventListener('click',function(e){
+        console.log('Clicked sport ');
+        print("Clicked Sport");
+},true)
+
+</script>
+
+</body>
+</html>
