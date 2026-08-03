@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Color Changer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f2f4f8;
+    min-height:100vh;
+}
+
+.navbar{
+    height:70px;
+    background:#1f2937;
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.2);
+}
+
+.navbar h1{
+    font-size:30px;
+    letter-spacing:1px;
+}
+.container{
+    height:calc(100vh - 50px);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.card{
+    width:450px;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.card h2{
+    margin-bottom:15px;
+    color:#333;
+}
+
+.card p{
+    color:#666;
+    margin-bottom:15px;
+    line-height:1.5;
+}
+
+
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+.btn{
+    border:none;
+    padding:14px 35px;
+    font-size:18px;
+    border-radius:8px;
+    cursor:pointer;
+    color:white;
+    transition:.3s;
+}
+
+.start-btn{
+    background:#22c55e;
+}
+
+.start-btn:hover{
+    background:#16a34a;
+    transform:translateY(-3px);
+}
+
+.stop-btn{
+    background:#ef4444;
+}
+
+.stop-btn:hover{
+    background:#dc2626;
+    transform:translateY(-3px);
+}
+
+.btn:active{
+    transform:scale(.95);
+}
+</style>
+<body>
+
+    <nav class="navbar">
+        <h1>🎨 Ultimate Color Changer</h1>
+    </nav>
+
+    <main class="container">
+
+        <div class="card">
+            <h2>Background Color Controller</h2>
+            <p>Click Start to change the background color automatically.</p>
+
+            <div class="buttons">
+                <button id="start" class="btn start-btn">
+                    ▶ Start
+                </button>
+
+                <button id="stop" class="btn stop-btn">
+                    ■ Stop
+                </button>
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+<script src="index.js"></script>
+</html>

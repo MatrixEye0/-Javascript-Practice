@@ -5,7 +5,7 @@ const user={
 
     welPage: function(){
         console.log(`${this.name}  welcome to website`);// this reffer current context
-        // console.log(this); here they return user obj
+         //console.log(this); here they return user obj
         
     }
 }
