@@ -49,7 +49,7 @@ new Promise(function(resolve,reject){
     return user.name   
 })
 .then((name)=>{
-    console.log(name);
+    console.log(name); // in this chain then only executed when previous then execute
 })
 .catch(function(er){
     console.log(er);   
