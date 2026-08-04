@@ -1,4 +1,5 @@
 // fetch has higher priority when to execution
+//fetch() is a built-in JavaScript function used to make HTTP requests. It returns a Promise.
 
 fetch("https://jsonplaceholder.typicode.com/users/1")
   .then(response => response.json()) // Convert response to JSON

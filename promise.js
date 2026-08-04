@@ -1,3 +1,5 @@
+//Promise is a JavaScript object that represents the eventual completion (or failure) of an asynchronous operation.
+
 const promiseOne = new Promise(function(resolve,reject){
     // work Async task like DB call, cryptography, networkcall
     setTimeout(function(){
