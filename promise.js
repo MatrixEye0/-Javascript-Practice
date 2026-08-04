@@ -55,4 +55,30 @@ new Promise(function(resolve,reject){
     console.log(er);   
 }).finally(()=>console.log("They executed always"))
 
-//------------------------------------------------------------------------------------------------------
+//-------------------------------async await-----------------------------------------------------------------------
+
+
+const promiseFive= new Promise(function(resolve,reject){
+    setTimeout(function(){
+       let error= false
+       if(!error){
+        resolve({name:"Jagji Singh", package:4200000})
+       } else{
+        reject('ERROR !!!! ')
+       }
+    },1600)
+})
+// async not directly handle error only by try
+async function consumeFifthPromise (){
+//    const response= await promiseFive
+//    console.log(response) if i write like this and error come so they not execute 
+
+    try{
+    const response= await promiseFive
+    console.log(response)
+   }
+   catch(err){ // if error come so catch executed 
+    console.log(err)
+   }
+}
+consumeFifthPromise()
