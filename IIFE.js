@@ -1,4 +1,5 @@
 // Immediately Invoked function expression IIFE = use for prevention of global scope popution
+//Normally, a function runs only when it is called. An IIFE runs automatically when the JavaScript engine reads it (compiles it).
 
 // function iife(){
 //     console.log("work properly")
