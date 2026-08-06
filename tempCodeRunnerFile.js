@@ -1,1 +1,0 @@
-// Output after 1s: "Hello, my name is Alice"
