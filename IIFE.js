@@ -18,4 +18,27 @@
 
 ((name)=>{
     console.log(`My name ${name}`)
-})('Jagjit Singh')// also run like this 
+})('Jagjit Singh')// also run like this
+
+// -----------module pattern-----------------------------------
+let check = (function (){
+    let name = 'Jagjit'
+    let age = 22
+    let networth = 1000000000
+    function username(){
+        return name // agar return name nhi karenge to console print hoga 
+                 // par undefine bhi kyoki kuch bhi return nhi hua example userage function .
+          console.log(name);      
+    }
+    function userage(){
+        console.log(age);
+    }
+    return{
+      u:  username,
+      a:  userage
+    }; // jo ham return object me dalenge wahi outside se execute ho payega .
+     // iss iife me networth execute nhi hoga outside . 
+     // agar networth ko kisi aur function me dalke us function ko return obj me dalde to chal jayega 
+})();
+console.log(check.u())
+console.log(check.a())
