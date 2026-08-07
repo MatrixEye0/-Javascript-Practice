@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>code spliting</title>
+</head>
+ <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto 25px;
+            padding: 5px 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style: none; 
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+            gap: 5px;
+            width: 100%;
+        }
+
+        li {
+            background: rgb(3, 243, 143);
+            padding: 4px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 10px;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        li:hover {
+            transform: translateY(-5px);
+            background: #e3f2fd;
+        }
+    </style>
+<body>
+    <h1> Code plitting </h1>
+    <button>Click Me</button>
+
+    <ul>
+        
+    </ul>
+    <script type="module" src="index.js"></script> <!--import export only when you write type module--> 
+</body>
+</html>
