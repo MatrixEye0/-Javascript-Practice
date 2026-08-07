@@ -2,10 +2,10 @@ const input =document.querySelector('.input1');
 
 function debounce(fun, delay){
     let timer;
-    return function(...arg){
+    return function(...arg){ // ...arg rest parameter Collect all arguments into one array.
         clearTimeout(timer)// jabtak 1000ms ka pause nhi hoga code bas yahi tak chalega aur timer clear hota rahega
         timer=setTimeout(()=>{
-           fun(...arg); 
+           fun(...arg); // ...arg spred operator Expands an array into individual arguments.
         },delay) // agar koi kam ho raha hai but usme 1000ms ka delay aya to ye function call ho jayega 
                // this use when we search something and type continue when we sudden pause they recomend answer on base of word you type 
     }
