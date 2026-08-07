@@ -1,7 +1,7 @@
 const input =document.querySelector('.input1');
 
 function debounce(fun, delay){
-    let timer;
+    let timer;  // return remember time even after debounce call and finicsh because of clouser.
     return function(...arg){ // ...arg rest parameter Collect all arguments into one array.
         clearTimeout(timer)// jabtak 1000ms ka pause nhi hoga code bas yahi tak chalega aur timer clear hota rahega
         timer=setTimeout(()=>{
