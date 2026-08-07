@@ -3,7 +3,7 @@ export function heavyCode(){
 
     const ul = document.querySelector('ul');
      const space = document.createDocumentFragment(); // first memory space me load honge fir browser pe 
-   for (let i =0 ; i < 100000 ;i++){ // but we dont use like this we browse few element first and other thanother this save unnesseary loading
+   for (let i =0 ; i < 10000 ;i++){ // but we dont use like this we browse few element first and other thanother this save unnesseary loading
    const li = document.createElement('li')
    li.textContent=i;
    space.appendChild(li)
