@@ -27,4 +27,21 @@ call() => Invokes the function immediately.
 apply() => Like call(), but arguments are passed as an array.
 bind() => Returns a new function with this permanently set. It does not execute immediately.
 
+// new keyword
+
+  function Person(name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+const person1 = new Person("Jagjit", 22);
+console.log(person1);
+
+ new keyword do: Creates a new empty object ,
+ Connects the object to function.prototype, 
+ Sets this to the new object , 
+  Calls the constructor -> Person("Jagjit", 22);,
+  Returns the new object ,
+  Create a new object using Person as the blueprint."  
+
 */
