@@ -9,6 +9,5 @@ function create(name,role,company){
     this.role=role
     this.company=company
 }
-
-const check = new create('Jagjit','SDE 3','Anthropic')
+const check = new create('Jagjit','CEO','Jagjit Software')
 console.log(check);
