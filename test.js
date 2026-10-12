@@ -5,7 +5,7 @@ var pass = "abc56" // var create problem in scope when we declare var inside or 
 let check // undefine because not store anywhere
 
 city = "Delhi"
-city="Asmoli"
+city="Amritsar"
 
 console.table([ jagjit, email, typeof pass, city, check])
  
